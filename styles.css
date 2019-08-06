@@ -6,6 +6,8 @@ html, body {
 
     /* Set custom font here */
     font-family: 'Ubuntu', sans-serif;
+
+    background-color: #000000;
 }
 
 .screen {
@@ -22,6 +24,9 @@ nav {
 
     display: grid;
     grid-template-columns: auto 1fr auto;
+
+    background-color: #1c1e3b;
+    color: white;
 }
 
 nav .left {
@@ -35,19 +40,22 @@ nav .right {
 nav .left div, nav .right div {
     display: inline-block;
 
-    padding: 10px 5px;
+    padding: 10px 10px;
+    
+    color: #d37013;
 }
 
 nav .left div a, nav .right div a {
     text-decoration: none;
-    color: blue;
+    
+    color: #d37013;
 }
 
 .jumbotron {
     width: 100%;
     grid-row: 2;
 
-    background-image: url(photo.jpg);
+    background-image: linear-gradient(#1c1e3b, #1a1b24d3, #000000), url(/image1.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -63,17 +71,20 @@ nav .left div a, nav .right div a {
 
     transform: translate(-50%, -50%);
 
-    font-size: 35px;
+    font-size: 100px;
     font-weight: bold;
 
-    text-shadow:
-    -1px -1px 0 #FFF,
-    1px -1px 0 #FFF,
-    -1px 1px 0 #FFF,
-    1px 1px 0 #FFF; 
+    color: #d37013b2;
+
+    /* text-shadow:
+        -1px -1px 0 #FFF,
+        1px -1px 0 #FFF,
+        -1px 1px 0 #FFF,
+        1px 1px 0 #FFF;  */
 }
 
 .content {
+    color: white;
 }
 
 .content .about {
@@ -81,15 +92,19 @@ nav .left div a, nav .right div a {
     grid-template-columns: 1fr 1fr;
     max-width: 100%;
 }
-.content .about .left {
-    grid-column: 1;
-    background-image: url(photo.jpg);
+.content .about {
+    height: 100%;
+    background-image: linear-gradient(to right, #00000000, #000000), linear-gradient(#000000, #00000000, #000000), url(image5.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 .content .about .right {
+    padding: 80px 50px;
     grid-column: 2;
+}
+.content .about .right .header {
+    font-size: 30px;
 }
 
 .content .contact {
@@ -102,7 +117,7 @@ nav .left div a, nav .right div a {
 }
 .content .contact .right {
     grid-column: 2;
-    background-image: url(photo.jpg);
+    background-image: url(image4.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -111,4 +126,6 @@ nav .left div a, nav .right div a {
 footer {
     text-align: center;
     padding: 20px;
+
+    color: white;
 }
