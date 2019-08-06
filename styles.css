@@ -1,32 +1,29 @@
 html, body {
     height: 100%;
     width: 100%;
-
     margin: 0;
-
     /* Set custom font here */
     font-family: 'Ubuntu', sans-serif;
-
     background-color: #000000;
 }
 
 .screen {
     height: 100vh;
-
     display: grid;
     grid-template-rows: auto 1fr;
 }
 
 nav {
     grid-row: 1;
-
     padding: 10px 20px;
-
     display: grid;
     grid-template-columns: auto 1fr auto;
-
     background-color: #1c1e3b;
     color: white;
+    user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
 }
 
 nav .left {
@@ -39,43 +36,44 @@ nav .right {
 
 nav .left div, nav .right div {
     display: inline-block;
-
     padding: 10px 10px;
-    
     color: #d37013;
 }
 
 nav .left div a, nav .right div a {
     text-decoration: none;
-    
     color: #d37013;
+
+    transition: color .15s;
+}
+
+nav .left div a:hover, nav .right div a:hover {
+    text-decoration: none;
+    color: #ffa600;
 }
 
 .jumbotron {
     width: 100%;
     grid-row: 2;
-
     background-image: linear-gradient(#1c1e3b, #1a1b24d3, #000000), url(/image1.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
 }
 
 .jumbotron .center {
     position: relative;
-
     display: inline-block;
-
     top: 50%;
     left: 50%;
-
     transform: translate(-50%, -50%);
-
     font-size: 100px;
     font-weight: bold;
-
     color: #d37013b2;
-
     /* text-shadow:
         -1px -1px 0 #FFF,
         1px -1px 0 #FFF,
@@ -92,6 +90,7 @@ nav .left div a, nav .right div a {
     grid-template-columns: 1fr 1fr;
     max-width: 100%;
 }
+
 .content .about {
     height: 100%;
     background-image: linear-gradient(to right, #00000000, #000000), linear-gradient(#000000, #00000000, #000000), url(image5.jpg);
@@ -99,10 +98,12 @@ nav .left div a, nav .right div a {
     background-position: center;
     background-repeat: no-repeat;
 }
+
 .content .about .right {
     padding: 80px 50px;
     grid-column: 2;
 }
+
 .content .about .right .header {
     font-size: 30px;
 }
@@ -112,9 +113,11 @@ nav .left div a, nav .right div a {
     grid-template-columns: 50% 50%;
     margin-top: 30px;
 }
+
 .content .contact .left {
     grid-column: 1;
 }
+
 .content .contact .right {
     grid-column: 2;
     background-image: url(image4.jpg);
@@ -126,6 +129,5 @@ nav .left div a, nav .right div a {
 footer {
     text-align: center;
     padding: 20px;
-
     color: white;
 }
