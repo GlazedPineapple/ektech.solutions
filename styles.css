@@ -1,0 +1,114 @@
+html, body {
+    height: 100%;
+    width: 100%;
+
+    margin: 0;
+
+    /* Set custom font here */
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.screen {
+    height: 100vh;
+
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+
+nav {
+    grid-row: 1;
+
+    padding: 10px 20px;
+
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+}
+
+nav .left {
+    grid-column: 1;
+}
+
+nav .right {
+    grid-column: 3;
+}
+
+nav .left div, nav .right div {
+    display: inline-block;
+
+    padding: 10px 5px;
+}
+
+nav .left div a, nav .right div a {
+    text-decoration: none;
+    color: blue;
+}
+
+.jumbotron {
+    width: 100%;
+    grid-row: 2;
+
+    background-image: url(photo.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.jumbotron .center {
+    position: relative;
+
+    display: inline-block;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    font-size: 35px;
+    font-weight: bold;
+
+    text-shadow:
+    -1px -1px 0 #FFF,
+    1px -1px 0 #FFF,
+    -1px 1px 0 #FFF,
+    1px 1px 0 #FFF; 
+}
+
+.content {
+}
+
+.content .about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 100%;
+}
+.content .about .left {
+    grid-column: 1;
+    background-image: url(photo.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.content .about .right {
+    grid-column: 2;
+}
+
+.content .contact {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin-top: 30px;
+}
+.content .contact .left {
+    grid-column: 1;
+}
+.content .contact .right {
+    grid-column: 2;
+    background-image: url(photo.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+}
